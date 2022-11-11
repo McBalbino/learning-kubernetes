@@ -1,81 +1,29 @@
-  663  kubectl version --client
-  664  kubectl get nodes
-  665  minikube version
-  666  minikube start
-  667  kubectl get nodes
-  668  kubectl run nginx-pod --image=ngix:latest
-  669  kubectl get pods
-  670  kubectl get pods --watch
-  671  kubectl version --client
-  672  kubectl get pods
-  673  minikube start
-  674  kubectl run nginx-pod --image=nginx:latest
-  675  kubectl edit pod nginx-pod
-  676  kubectl get pods
-  677  kubectl apply -f ./primeiro-pod.yaml 
-  678  kubectl get pods
-  679  kubectl delete pod nginx-pod
-  680  kubectl get pods
-  681  kubectl delete -f ./primeiro-pod.yaml 
-  682  kubectl get pods
-  683  kubectl apply -f ./portal-noticias.yaml 
-  684  kubectl get pods --watch
-  685  kubectl describe pod portal-noticias.yaml 
-  686  kubectl describe pod portal-noticias
-  687  clear
-  688  kubectl exec -it portal-noticias -- bash
-  689  kubectl describe pod portal-noticias
-  690  kubectl get pods -o wide
-  691  kubectl delete pod portal-noticias
-  692  kubectl apply -f ./portal-noticias.yaml 
-  693  kubectl get pods -o wide
-  694  ip -c a
-  695  clar
-  696  clear
-  697  kubectl apply -f ./pod-1.yaml 
-  698  kubectl apply -f ./pod-2.yaml 
-  699  kubectl describe pod pod-2
-  700  kubectl apply -f ./svc-pod-2.yaml 
-  701  kubectl get svc
-  702  kubectl get pods
-  703  kubectl exec -it pod-1 -- bash
-  704  kubectl exec -it portal-noticias -- bash
-  705  clear
-  706  kubectl delete -f ./pod-2.yaml 
-  707  kubectl get svc
-  708  kubectl exec -it portal-noticias -- bash
-  709  kubectl apply -f ./pod-2.yaml 
-  710  kubectl exec -it portal-noticias -- bash
-  711  kubectl apply -f ./svc-pod-2.yaml 
-  712  kubectl get svc
-  713  kubectl exec -it portal-noticias -- bash
-  714  kubectl get pods -o wide
-  715  git init
-  716  git status
-  717  git add .
-  718  git commit -m "criando services"
-  719  git push
-  720  git remote add learning-kubernetes git@github.com:McBalbino/learning-kubernetes.git
-  721  git push learning-kubernetes
-724  kubectl apply -f svc-pod-1.yaml 
-  725  minikube start
-  726  kubectl get pods
-  727  kubectl get svc
-  728  kubectl apply -f svc-pod-1.yaml 
-  729  kubectl get svc
-  730  kubectl apply -f svc-pod-1.yaml 
-  731  kubectl apply -f pod-1.yaml 
-  732  kubectl get svc
-  733  kubectl exec -it portal-noticias bash
-  734  kubectl get svc
-  735  kubectl get nodes -o wide
-  736  kubectl apply -f pod-1.yaml 
-  737  kubectl apply -f svc-pod-1.yaml 
-  738  kubectl get pods
-  739  kubectl delete pods --all
-  740  kubectl delete svc --all
-  741  kubectl apply -f portal-noticias.yaml 
-  742  kubectl apply -f svc-portal-noticias.yaml 
-  743  kubectl get pods
-  744  kubectl get svc
-  745  kubectl get nodes -o wide
+# INIT COMMANDS 
+kubectl version --client
+kubectl run nginx-pod --image=ngix:latest
+minikube version
+minikube start
+
+# NODES COMMANDS
+kubectl get nodes
+
+# PODS COMMANDS
+kubectl get pods
+kubectl get pods --watch
+kubectl edit pod nginx-pod
+kubectl delete pod nginx-pod
+kubectl apply -f ./primeiro-pod.yaml
+kubectl delete -f ./primeiro-pod.yaml
+kubectl describe pod portal-noticias
+kubectl get pods -o wide
+kubectl delete pods --all
+
+# SERVICE COMMANDS
+kubectl apply -f ./svc-pod-2.yaml
+kubectl apply -f svc-pod-1.yaml 
+kubectl get svc
+kubectl delete svc --all
+
+# OUTROS
+kubectl exec -it portal-noticias -- bash
+kubectl exec -it pod-1 -- bash
