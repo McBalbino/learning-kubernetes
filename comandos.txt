@@ -6,6 +6,7 @@ minikube start
 
 # NODES COMMANDS
 kubectl get nodes
+kubectl get nodes -o wide
 
 # PODS COMMANDS
 kubectl get pods
@@ -27,3 +28,39 @@ kubectl delete svc --all
 # OUTROS
 kubectl exec -it portal-noticias -- bash
 kubectl exec -it pod-1 -- bash
+
+----------------------------------------------------------------
+788  kubectl delete pod db-noticias
+  789  minikube init
+  790  minikube start
+  791  kubectl delete pod db-noticias
+  792  kubectl apply -f db-noticias.yaml 
+  793  kubectl get pods
+  794  kubectl exec -it db-noticias --bash
+  795  kubectl exec -it db-noticias -- bash
+  796  kubectl exec -it sistema-noticias -- bash
+  797  kubectl apply -f db-configmap.yaml 
+  798  kubectl get configmap
+  799  kubectl describe configmap db-configmap
+  800  kubectl get pods
+  801  kubectl delete pod db-noticias
+  802  kubectl apply -f db-noticias.yaml
+  803  kubectl get pods
+  804  kubectl exec -it db-noticias -- bash
+  805  kubectl exec -it sistema-noticias -- bash
+  806  kubectl get svc
+  807  kubectl apply -f sistema-configmap.yaml 
+  808  kubectl delete pod sistema-noticias
+  809  kubectl apply -f sistema-noticias.yaml 
+  810  kubectl get pods -o wide
+  811  kubectl describe pod portal-noticias
+  812  kubectl exec -it portal-noticias -- bash
+  813  kubectl get nodes -o wide
+  814  kubectl apply -f portal-configmap.yaml 
+  815  kubectl delete pod portal-noticias
+  816  kubectl apply -f portal-noticias.yaml 
+  817  kubectl apply -f portal-configmap.yaml 
+  818  kubectl apply -f portal-noticias.yaml 
+  819  kubectl delete pod portal-noticias
+  820  kubectl apply -f portal-noticias.yaml 
+  821  kubectl apply -f portal-configmap.yaml 
