@@ -40,3 +40,47 @@ kubectl exec -it portal-noticias -- bash
 kubectl exec -it pod-1 -- bash
 
 ----------------------------------------------------------------
+  849  kubectl apply -f nginx-deployment.yaml 
+  850  kubectl get pods
+  851  kubectl get rs
+  852  kubectl get deployments
+  853  kubectl rollout history deployment nginx-deployment
+  854  kubectl apply -f nginx-deployment.yaml --record
+  855  kubectl get pods
+  856  kubectl rollout history deployment nginx-deployment
+  857  kubectl annotate deployment nginx-deployment kubernetes.io/change-cause="Definindo a imagem com versão latest"
+  858  kubectl rollout history deployment nginx-deployment
+  859  kubectl apply -f nginx-deployment.yaml 
+  860  kubectl rollout history deployment nginx-deployment
+  861  kubectl annotate deployment nginx-deployment kubernetes.io/change-cause="Definindo a imagem com versão 1"
+  862  kubectl rollout history deployment nginx-deployment
+  863  kubectl get pods
+  864  kubectl describe pod nginx-deployment-7df94d45dc-8hmp6 
+  865  kubectl rollout undo deployment nginx-deployment --to-revision=2
+  866  kubectl get pods
+  867  kubectl describe pod nginx-deployment-5854cd58bc-vspdg
+  868  kubectl delete deployment nginx-deployment
+  869  kubectl get pods
+  870  kubectl delete -f portal-noticias-replicaset.yaml 
+  871  kubectl get rs
+  872  kubectl get pods --watch
+  873  kubectl apply -f portal-noticias-deployment.yaml 
+  874  kubectl get pods
+  875  kubectl rollout history portal-noticias-deployment
+  876  kubectl rollout history deployment portal-noticias-deployment
+  877  kubectl annotate deployment portal-noticias-deployment kubernetes.io/chage-cause="Criando portal de notícias na versão 1"
+  878  kubectl rollout history deployment portal-noticias-deployment
+  879  kubectl annotate deployment portal-noticias-deployment kubernetes.io/change-cause="Criando portal de notícias na versão 1"
+  880  kubectl rollout history deployment portal-noticias-deployment
+  881  kubectl get pods
+  882  kubectl delete pod sistema-noticias
+  883  kubectl apply -f sistema-noticias-deployment.yaml 
+  884  kubectl get pods
+  885  kubectl delete pod db-noticias
+  886  kubectl apply -f db-noticias-deployment.yaml 
+  887  kubectl get pods
+  888  kubectl annotate deployment sistema-noticias-deployment kubernetes.io/change-cause="Subindo o sistema na versão 1"
+  889  kubectl rollout history deployment sistema-noticias-deployment
+  890  kubectl annotate deployment db-noticias-deployment kubernetes.io/change-cause="Subindo o banco na versão 1"
+  891  kubectl rollout history deployment db-noticias-deployment
+  892  kubectl get pods
