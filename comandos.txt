@@ -84,3 +84,81 @@ kubectl exec -it pod-1 -- bash
   890  kubectl annotate deployment db-noticias-deployment kubernetes.io/change-cause="Subindo o banco na versão 1"
   891  kubectl rollout history deployment db-noticias-deployment
   892  kubectl get pods
+
+
+   1020  kubectl delete namespace argocd
+ 1021  kubectl delete namespace nginx-git-test
+ 1022  kubectl delete namespace nginx-test
+ 1023  kubectl get pods
+ 1024  minikube stop
+ 1025  minikube start
+ 1026  kubectl get pods
+ 1027  kubectl config set-context --current --namespace=default
+ 1028  kubectl get pods
+ 1029  kubectl apply -f pod-volume.yaml 
+ 1030  kubectl get pods
+ 1031  kubectl describe pod pod-volume
+ 1032  minikube ssh
+ 1033  kubectl delete -f pod-volume.yaml 
+ 1034  kubectl apply -f pod-volume.yaml 
+ 1035  kubectl get pods
+ 1036  kubectl describe pod pod-volume
+ 1037  kubectl get pods
+ 1038  kubectl describe pod pod-volume
+ 1039  kubectl delete -f pod-volume.yaml 
+ 1040  kubectl apply -f pod-volume.yaml 
+ 1041  kubectl get pods
+ 1042  kubectl describe pod pod-volume
+ 1043  kubectl get pods
+ 1044  kubectl describe pod pod-volume
+ 1045  kubectl get pods
+ 1046  kubectl describe pod pod-volume
+ 1047  kubectl get pods
+ 1048  kubectl describe pod pod-volume
+ 1049  kubectl apply -f pod-volume.yaml 
+ 1050  kubectl get pods
+ 1051  kubectl delete -f pod-volume.yaml 
+ 1052  kubectl get pods
+ 1053  minikube stop
+ 1054  minikube start
+ 1055  kubectl get pods
+ 1056  minikube stop
+ 1057  minikube start --namespace=default
+ 1058  kubectl get pods
+ 1059  kubectl delete -f pod-volume.yaml 
+ 1060  kubectl apply -f pod-volume.yaml 
+ 1061  kubectl get pods
+ 1062  minikube ssh
+ 1063  kubectl exec -it pod-volume --container nginx-container -- bash
+ 1064  minikube start --namespace=default
+ 1065  kubectl exec -it pod-volume --container nginx-container -- bash
+ 1066  minikube ssh
+ 1067  kubectl get pods
+ 1068  minikube stop
+ 1069  minikube start --namespace=default
+ 1070  kubectl get pods
+ 1071  kubectl get deployments
+ 1072  minikube start
+ 1073  kubectl delete pod pod-volume
+ 1074  kubectl get deployments
+ 1075  kubectl delete deployment sistema-noticias-deployment
+ 1076  kubectl apply -f sistema-noticias-statefulset.yaml 
+ 1077  kubectl get pods
+ 1078  kubectl delete pod sistema-noticias-statefulset-0
+ 1079  kubectl get pods
+ 1080  kubectl get pv
+ 1081  kubectl get pvc
+ 1082  kubectl exec -it sistema-noticias-statefulset-0 -- bash
+ 1083  kubectl apply -f imagens-pvc.yaml 
+ 1084  kubectl apply -f sessao-pvc.yaml 
+ 1085  kubectl get pvc
+ 1086  kubectl get pv
+ 1087  kubectl get sc
+ 1088  kubectl delete -f sistema-noticias-statefulset.yaml 
+ 1089  kubectl apply -f sistema-noticias-statefulset.yaml 
+ 1090  kubectl get pdos
+ 1091  kubectl get pods
+ 1092  kubectl delete pod sistema-noticias-statefulset-0
+ 1093  kubectl get pod --watch
+ 1094  kubectl describe pod http://192.168.39.37:30000/
+ 1095  kubectl describe pod sistema-noticias-statefulset-0
